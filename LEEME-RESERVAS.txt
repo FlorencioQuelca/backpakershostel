@@ -1,0 +1,26 @@
+ACTIVAR EL CALENDARIO DE RESERVAS (gratis, con Google)
+
+1. Entra a sheets.google.com con la cuenta de Gmail del hostel y crea una hoja nueva ("Reservas Oruro").
+2. Menu Extensiones > Apps Script. Borra lo que haya y pega todo el contenido de apps-script/Codigo.gs.
+3. Cambia OWNER_EMAIL por tu correo. Guarda.
+4. Elige la funcion "setup" arriba y pulsa Ejecutar (acepta los permisos). Se crean las hojas "Habitaciones" y "Reservas".
+5. En la hoja "Habitaciones" revisa precios y capacidades (cap = camas en dormitorios, 1 en habitaciones privadas).
+6. Implementar > Nueva implementacion > tipo "Aplicacion web". Ejecutar como: Yo. Quien tiene acceso: Cualquier persona. Copia la URL.
+7. Abre reservar.html, busca CFG y pega la URL en API. Pon tambien tu WhatsApp.
+8. Sube todo a Hostinger.
+
+COMO FUNCIONA
+- El huesped elige fechas, ve la disponibilidad real, elige habitacion/camas y envia la solicitud.
+- La solicitud llega a la hoja "Reservas" con estado "Pendiente" y te llega un correo. El huesped recibe un aviso.
+- Pendiente y Confirmada ocupan cupo. Para liberar, cambia el Estado a "Cancelada".
+- Cuando vendas una cama por otra plataforma o en recepcion, agrega una fila en "Reservas" (Estado: Confirmada) para que la web la bloquee.
+
+SINCRONIZAR CON BOOKING / EXPEDIA / HOSTELWORLD (opcional, gratis, con retraso)
+- Para traer fechas ocupadas: en ICAL_IN del script pega el enlace iCal que exporte la plataforma (id de habitacion -> enlace).
+- Para enviar tus reservas: usa <URL de la app>?action=ics&item=h5 (cambia h5 por la habitacion) e importalo en la plataforma.
+- iCal solo marca fechas, no cantidad de camas, y se actualiza cada 15-60 min o mas. Sirve bien para habitaciones privadas. Para dormitorios, mejor limitar la cantidad de camas que vendes en cada plataforma.
+
+FORMULARIO DE CONTACTO POR CORREO (index.html)
+- Pega la misma URL de Google Apps Script en CFG.api de index.html (arriba del script). Sin esa URL, la web intenta usar send.php (solo funciona en hosting con PHP, como Hostinger).
+- El mensaje solo se confirma al visitante cuando el servidor responde que el correo salio; si falla, ve un aviso y un enlace a WhatsApp.
+- Si ya tenias la hoja "Habitaciones": cambia el titulo de la columna H a "tiers", pon 150|150|280|280 en h1 y 90|150 en h7 (separados por barra vertical), y cambia el tipo de h2, h3 y h8 a dormw. Luego pega de nuevo Codigo.gs y crea una nueva version en "Administrar implementaciones".
