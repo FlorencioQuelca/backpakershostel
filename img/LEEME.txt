@@ -1,0 +1,22 @@
+FOTOS A CREAR (formato .jpg, nombres exactos, en minusculas)
+
+PORTADA
+hero-entrada.jpg          Puerta principal / fachada del hostel (1920x1080, horizontal)
+
+INICIO
+inicio-jardin.jpg         Jardin o terraza (1200x900)
+habitaciones-portada.jpg  La habitacion mas bonita (1200x900)
+desayuno-cocina.jpg       Desayuno servido o cocina (1200x900)
+tours-traslados.jpg       Grupo, vehiculo o paisaje de salida (1200x900)
+
+HABITACIONES (800x600)
+room-1.jpg  room-2.jpg  room-3.jpg  room-4.jpg  room-5.jpg
+room-5_5.jpg (la habitacion 5.5)  room-6.jpg  room-7.jpg  room-8.jpg
+
+GALERIA (1200x1200 o 1200x900; las que falten no aparecen)
+galeria-01.jpg ... galeria-08.jpg   (terraza, cocina, bar, chimenea, parking, areas comunes, banos, entorno)
+
+COMPARTIR EN REDES
+og-image.jpg              1200x630 (portada recortada con el logo)
+
+Cada foto debe pesar menos de 300 KB (comprimir en squoosh.app).
